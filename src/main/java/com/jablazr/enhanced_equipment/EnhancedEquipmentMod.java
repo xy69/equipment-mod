@@ -1,4 +1,4 @@
-package com.example.examplemod;
+package com.jablazr.enhanced_equipment;
 
 import org.slf4j.Logger;
 
