@@ -7,3 +7,7 @@
 ## Development guide
 
 Start client with `gradle runClient`.
+
+## Features
+
+- Cobalt block
