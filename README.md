@@ -8,7 +8,7 @@
 
 Start client with `gradle runClient`.
 
-Format the code with `gradle spotlessApply`
+Format the code with `gradle spotlessApply`.
 
 ## Features
 
