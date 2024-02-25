@@ -10,10 +10,11 @@ import net.minecraftforge.registries.ForgeRegistries;
 import net.minecraftforge.registries.RegistryObject;
 
 public class BlockInit {
-    public static final DeferredRegister<Block> BLOCKS = DeferredRegister.create(ForgeRegistries.BLOCKS, EnhancedEquipmentMod.MODID);
+  public static final DeferredRegister<Block> BLOCKS =
+      DeferredRegister.create(ForgeRegistries.BLOCKS, EnhancedEquipmentMod.MODID);
 
-    public static final RegistryObject<CobaltBlock> COBALT_BLOCK = BLOCKS.register(CobaltBlock.registryName,
-            () -> new CobaltBlock(
-                    BlockBehaviour.Properties.ofFullCopy(Blocks.DIAMOND_BLOCK)
-            ));
+  public static final RegistryObject<CobaltBlock> COBALT_BLOCK =
+      BLOCKS.register(
+          CobaltBlock.registryName,
+          () -> new CobaltBlock(BlockBehaviour.Properties.ofFullCopy(Blocks.DIAMOND_BLOCK)));
 }
