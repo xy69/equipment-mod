@@ -1,4 +1,7 @@
 {
+  "item.enhanced_equipment.cobalt_ingot": "Cobalt Ingot",
+  "item.enhanced_equipment.cobalt_nugget": "Cobalt Nugget",
   "block.enhanced_equipment.cobalt_block": "Cobalt Block",
-  "creative_mode.tab": "Enhanced Equipment"
+
+  "enhanced_equipment.creative_mode.tab": "Enhanced Equipment"
 }

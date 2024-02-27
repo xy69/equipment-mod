@@ -22,4 +22,10 @@ public class ItemInit {
                   new BlockItem(
                       BlockInit.COBALT_BLOCK.get(),
                       new Item.Properties().rarity(Rarity.UNCOMMON))));
+
+  public static final RegistryObject<Item> COBALT_NUGGET =
+      addToTab(ITEMS.register("cobalt_nugget", () -> new Item(new Item.Properties())));
+
+  public static final RegistryObject<Item> COBALT_INGOT =
+      addToTab(ITEMS.register("cobalt_ingot", () -> new Item(new Item.Properties())));
 }

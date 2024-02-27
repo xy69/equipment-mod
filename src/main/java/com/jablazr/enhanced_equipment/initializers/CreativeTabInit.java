@@ -29,7 +29,7 @@ public class CreativeTabInit {
           "enhanced_equipment_tab",
           () ->
               CreativeModeTab.builder()
-                  .title(Component.translatable("creative_mode.tab"))
+                  .title(Component.translatable("enhanced_equipment.creative_mode.tab"))
                   .icon(ItemInit.COBALT_BLOCK_ITEM.get()::getDefaultInstance)
                   .displayItems(
                       (displayParams, output) ->
