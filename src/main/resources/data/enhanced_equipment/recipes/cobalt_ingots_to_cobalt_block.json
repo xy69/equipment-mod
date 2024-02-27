@@ -1,0 +1,12 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": ["EEE", "EEE", "EEE"],
+  "key": {
+    "E": {
+      "item": "enhanced_equipment:cobalt_ingot"
+    }
+  },
+  "result": {
+    "item": "enhanced_equipment:cobalt_block"
+  }
+}
