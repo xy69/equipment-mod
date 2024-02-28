@@ -24,4 +24,28 @@ public class ItemInit {
 
   public static final RegistryObject<Item> COBALT_INGOT =
       addToTab(ITEMS.register("cobalt_ingot", () -> new Item(new Item.Properties())));
+
+  public static final RegistryObject<BlockItem> EXAMPLE_ORE_ITEM =
+      addToTab(
+          ITEMS.register(
+              "example_ore",
+              () -> new BlockItem(BlockInit.EXAMPLE_ORE.get(), new Item.Properties())));
+
+  public static final RegistryObject<BlockItem> DEEPSLATE_EXAMPLE_ORE_ITEM =
+      addToTab(
+          ITEMS.register(
+              "deepslate_example_ore",
+              () -> new BlockItem(BlockInit.DEEPSLATE_EXAMPLE_ORE.get(), new Item.Properties())));
+
+  public static final RegistryObject<BlockItem> NETHER_EXAMPLE_ORE_ITEM =
+      addToTab(
+          ITEMS.register(
+              "nether_example_ore",
+              () -> new BlockItem(BlockInit.NETHER_EXAMPLE_ORE.get(), new Item.Properties())));
+
+  public static final RegistryObject<BlockItem> END_EXAMPLE_ORE_ITEM =
+      addToTab(
+          ITEMS.register(
+              "end_example_ore",
+              () -> new BlockItem(BlockInit.END_EXAMPLE_ORE.get(), new Item.Properties())));
 }
