@@ -1,0 +1,7 @@
+{
+  "variants": {
+    "": {
+      "model": "enhanced_equipment:block/nether_example_ore"
+    }
+  }
+}

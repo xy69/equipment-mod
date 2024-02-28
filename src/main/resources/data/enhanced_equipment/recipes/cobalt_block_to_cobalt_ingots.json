@@ -1,0 +1,12 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "ingredients": [
+    {
+      "item": "enhanced_equipment:cobalt_block"
+    }
+  ],
+  "result": {
+    "item": "enhanced_equipment:cobalt_ingot",
+    "count": 9
+  }
+}

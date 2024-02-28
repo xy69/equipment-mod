@@ -1,0 +1,6 @@
+{
+  "parent": "minecraft:item/generated",
+  "textures": {
+    "layer0": "enhanced_equipment:item/cobalt_ingot"
+  }
+}
