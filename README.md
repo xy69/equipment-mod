@@ -10,6 +10,9 @@ Start client with `gradle runClient`.
 
 Format the code with `gradle spotlessApply`.
 
-## Features
+## Mod features
 
-- Cobalt block
+- Cobalt
+  - Ingot, Nugget, Block
+  - Recipes (Crafting, Smelting)
+  - Ore, Worldgen (Overworld, Nether, End)
