@@ -1,0 +1,12 @@
+{
+  "parent": "minecraft:block/cube",
+  "textures": {
+    "down": "enhanced_equipment:block/enhancer_bottom",
+    "east": "enhanced_equipment:block/enhancer_side",
+    "north": "enhanced_equipment:block/enhancer_front",
+    "particle": "enhanced_equipment:block/enhancer_front",
+    "south": "enhanced_equipment:block/enhancer_front",
+    "up": "enhanced_equipment:block/enhancer_top",
+    "west": "enhanced_equipment:block/enhancer_side"
+  }
+}

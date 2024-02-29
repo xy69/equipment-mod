@@ -1,0 +1,14 @@
+{
+  "item.enhanced_equipment.cobalt_ingot": "Cobalt Ingot",
+  "item.enhanced_equipment.cobalt_nugget": "Cobalt Nugget",
+  "block.enhanced_equipment.cobalt_block": "Cobalt Block",
+
+  "enhanced_equipment.creative_mode.tab": "Enhanced Equipment",
+
+  "block.enhanced_equipment.example_ore": "Example Ore",
+  "block.enhanced_equipment.deepslate_example_ore": "Deepslate Example Ore",
+  "block.enhanced_equipment.nether_example_ore": "Nether Example Ore",
+  "block.enhanced_equipment.end_example_ore": "End Example Ore",
+
+  "block.enhanced_equipment.enhancer_block": "Enhancer"
+}
