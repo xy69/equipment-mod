@@ -42,7 +42,17 @@ public class EnhancerMenu extends ItemCombinerMenu {
 
     @Override
     protected void onTake(Player p_150474_, ItemStack p_150475_) {
-
+        this.inputSlots.setItem(0, ItemStack.EMPTY);
+        ItemStack resourceStack = this.inputSlots.getItem(1);
+        ItemStack resourceStackCopy = resourceStack.copy();
+        int newResourceStackCount = resourceStackCopy.getCount() - 1;
+        if(newResourceStackCount > 0) {
+            resourceStackCopy.setCount(newResourceStackCount);
+            this.inputSlots.setItem(1, resourceStackCopy);
+        } else {
+            this.inputSlots.setItem(1, ItemStack.EMPTY);
+        }
+        broadcastChanges();
     }
 
     @Override
@@ -52,10 +62,57 @@ public class EnhancerMenu extends ItemCombinerMenu {
 
     @Override
     public void createResult() {
+        ItemStack itemStack = this.inputSlots.getItem(0);
+        ItemStack resourceStack = this.inputSlots.getItem(1);
+        Optional<EquipmentType> type = getEquipmentType(itemStack);
 
+        if(type.isEmpty()) return;
+
+        Item resource = resourceStack.getItem();
+
+        List<EnhancementRecipe> allRecipes = RecipeList.enhancementRecipes;
+
+        Optional<EnhancementRecipe> chosenRecipe = allRecipes.stream().filter((recipe) -> recipe.type == type.get() && recipe.resource == resource).findFirst();
+
+
+        if(itemStack.isEmpty() || chosenRecipe.isEmpty()) {
+            this.resultSlots.setItem(0, ItemStack.EMPTY);
+        } else {
+            ItemStack itemStack1 = itemStack.copy();
+            CompoundTag enhancements = itemStack1.getOrCreateTagElement("enhancements");
+            enhancements.putBoolean(chosenRecipe.get().effect, true);
+
+            this.resultSlots.setItem(0, itemStack1);
+        }
+        this.broadcastChanges();
     }
 
-
+    @NotNull
+    private static Optional<EquipmentType> getEquipmentType(ItemStack itemStack) {
+        Optional<EquipmentType> type = Optional.empty();
+        Item item = itemStack.getItem();
+        if(item instanceof ArmorItem armorItem) {
+            ArmorItem.Type itemType = armorItem.getType();
+            if(itemType == ArmorItem.Type.HELMET) {
+                type = Optional.of(EquipmentType.HELMET);
+            } else if(itemType == ArmorItem.Type.CHESTPLATE) {
+                type = Optional.of(EquipmentType.CHESTPLATE);
+            }else if(itemType == ArmorItem.Type.LEGGINGS) {
+                type = Optional.of(EquipmentType.LEGGINS);
+            }else if(itemType == ArmorItem.Type.BOOTS) {
+                type = Optional.of(EquipmentType.BOOTS);
+            }
+        } else if(item instanceof ShovelItem) {
+            type = Optional.of(EquipmentType.SHOVEL);
+        } else if(item instanceof AxeItem) {
+            type = Optional.of(EquipmentType.AXE);
+        } else if(item instanceof HoeItem) {
+            type = Optional.of(EquipmentType.HOE);
+        } else if(item instanceof PickaxeItem) {
+            type = Optional.of(EquipmentType.PICKAXE);
+        }
+        return type;
+    }
 
 
     @Override
