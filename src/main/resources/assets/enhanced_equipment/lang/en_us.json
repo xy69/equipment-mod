@@ -8,5 +8,7 @@
   "block.enhanced_equipment.example_ore": "Example Ore",
   "block.enhanced_equipment.deepslate_example_ore": "Deepslate Example Ore",
   "block.enhanced_equipment.nether_example_ore": "Nether Example Ore",
-  "block.enhanced_equipment.end_example_ore": "End Example Ore"
+  "block.enhanced_equipment.end_example_ore": "End Example Ore",
+
+  "block.enhanced_equipment.enhancer_block": "Enhancer"
 }

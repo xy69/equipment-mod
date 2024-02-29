@@ -2,11 +2,15 @@ package com.jablazr.enhanced_equipment.initializers;
 
 import com.jablazr.enhanced_equipment.EnhancedEquipmentMod;
 import com.jablazr.enhanced_equipment.blocks.CobaltBlock;
+import com.jablazr.enhanced_equipment.blocks.EnhancerBlock;
 import net.minecraft.util.valueproviders.UniformInt;
 import net.minecraft.world.level.block.Block;
 import net.minecraft.world.level.block.Blocks;
 import net.minecraft.world.level.block.DropExperienceBlock;
 import net.minecraft.world.level.block.state.BlockBehaviour;
+import net.minecraft.world.level.block.state.properties.NoteBlockInstrument;
+import net.minecraft.world.level.material.MapColor;
+import net.minecraft.world.level.material.PushReaction;
 import net.minecraftforge.registries.DeferredRegister;
 import net.minecraftforge.registries.ForgeRegistries;
 import net.minecraftforge.registries.RegistryObject;
@@ -49,4 +53,17 @@ public class BlockInit {
           () ->
               new DropExperienceBlock(
                   UniformInt.of(4, 7), BlockBehaviour.Properties.ofFullCopy(Blocks.END_STONE)));
+
+  public static final RegistryObject<Block> ENHANCER_BLOCK =
+      BLOCKS.register(
+          "enhancer_block",
+          () ->
+              new EnhancerBlock(
+                  BlockBehaviour.Properties.ofFullCopy(Blocks.ANVIL)
+                      .mapColor(MapColor.CLAY)
+                      .strength(5.0f, 17f)
+                      .instrument(NoteBlockInstrument.BANJO)
+                      .lightLevel(state -> 10)
+                      .requiresCorrectToolForDrops()
+                      .pushReaction(PushReaction.DESTROY)));
 }

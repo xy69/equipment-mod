@@ -6,6 +6,7 @@ import com.jablazr.enhanced_equipment.EnhancedEquipmentMod;
 import com.jablazr.enhanced_equipment.blocks.CobaltBlock;
 import net.minecraft.world.item.BlockItem;
 import net.minecraft.world.item.Item;
+import net.minecraft.world.item.Rarity;
 import net.minecraftforge.registries.DeferredRegister;
 import net.minecraftforge.registries.ForgeRegistries;
 import net.minecraftforge.registries.RegistryObject;
@@ -48,4 +49,13 @@ public class ItemInit {
           ITEMS.register(
               "end_example_ore",
               () -> new BlockItem(BlockInit.END_EXAMPLE_ORE.get(), new Item.Properties())));
+
+  public static final RegistryObject<BlockItem> ENHANCER_BLOCK_ITEM =
+      addToTab(
+          ITEMS.register(
+              "enhancer_block",
+              () ->
+                  new BlockItem(
+                      BlockInit.ENHANCER_BLOCK.get(),
+                      new Item.Properties().rarity(Rarity.UNCOMMON))));
 }
