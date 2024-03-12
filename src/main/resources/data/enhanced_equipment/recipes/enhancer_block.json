@@ -1,0 +1,15 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": ["nn", "ww", "ww"],
+  "key": {
+    "n": {
+      "item": "minecraft:netherite_ingot"
+    },
+    "w": {
+      "item": "minecraft:warped_planks"
+    }
+  },
+  "result": {
+    "item": "enhanced_equipment:enhancer_block"
+  }
+}
